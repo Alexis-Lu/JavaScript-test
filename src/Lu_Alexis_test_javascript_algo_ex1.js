@@ -4,29 +4,27 @@ function F11(table_digits) {
   for (let i = 0; i < table_digits.length; i++) {
     newTable.push(table_digits[i].split(" "));
   }
-  return newTable
+  return newTable;
 }
 
 function F12(table) {
-  var body = document.getElementsByTagName('body')[0];
+  var body = document.getElementsByTagName("body")[0];
 
   // creates a <table> element and a <tbody> element
-  var tbl = document.createElement('table');
-  var tblBody = document.createElement('tbody');
+  var tbl = document.createElement("table");
+  var tblBody = document.createElement("tbody");
 
   // creating all cells
   for (var i = 0; i < table.length; i++) {
     // creates a table row
-    var row = document.createElement('tr');
+    var row = document.createElement("tr");
 
     for (var j = 0; j < table.length; j++) {
       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
-      var cell = document.createElement('td');
-      var cellText = document.createTextNode(
-        table[i][j]
-      );
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(table[i][j]);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
@@ -40,7 +38,7 @@ function F12(table) {
   // appends <table> into <body>
   body.appendChild(tbl);
   // sets the border attribute of tbl to 2;
-  tbl.setAttribute('border', '2');
+  tbl.setAttribute("border", "2");
 }
 
 F12(F11(array_number));
